@@ -41,7 +41,7 @@
   <arg name="do_rectification" default="false"/>
 
   <group ns="$(arg cam_name)">  
-    <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager" output="screen" launch-prefix="sudo"/>
     <!-- camera driver nodelet -->
     <node pkg="nodelet" type="nodelet" name="snap_cam_nodelet"
 	  args="load snap_cam_ros/driver $(arg nodelet_manager_name)">          
