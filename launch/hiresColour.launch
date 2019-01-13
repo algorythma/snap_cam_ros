@@ -44,7 +44,7 @@
     <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager" output="screen"/>
     <!-- camera driver nodelet -->
     <node pkg="nodelet" type="nodelet" name="snap_cam_nodelet"
-	  args="load snap_cam_ros/driver $(arg nodelet_manager_name)" launch-prefix="sudo">
+	  args="load snap_cam_ros/driver $(arg nodelet_manager_name)">
       <param name="camera_name" value="$(arg cam_name)"/>  
       <param name="format" value="1"/>
       <param name="camera_number" value="0"/>
